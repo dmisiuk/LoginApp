@@ -9,11 +9,8 @@
 </head>
 <body>
 <h2>Successful login</h2>
-<%
-User user = (User) session.getAttribute("user");
-%>
 
-hello <%=  user.getUserName()%>
-
+<jsp:useBean id="user" class="by.minsler.web.dto.User" scope="session"></jsp:useBean>
+Hello <jsp:getProperty property="userName" name="user"/>
 </body>
 </html>
