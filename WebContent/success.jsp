@@ -4,15 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>login page</title>
+<title>Successful login</title>
 </head>
 <body>
-
-<form action="login" method="post">
-	<br>UserID:<input type="text" name="userID">
-	<br>Password:<input type="password" name="password">
-	<br><input type="submit" value="login"> 
-</form>
-
+<h2>Successful login</h2>
 </body>
 </html>

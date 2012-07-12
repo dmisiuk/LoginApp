@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import by.minsler.web.service.LoginService;
+
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -18,5 +20,14 @@ public class LoginServlet extends HttpServlet {
 		String password;
 		userID = request.getParameter("userID");
 		password = request.getParameter("password");
+		LoginService loginService = new LoginService();
+		boolean result = loginService.authenticate(userID, password);
+		if (result) {
+			response.sendRedirect("success.jsp");
+			return;
+		} else {
+			response.sendRedirect("login.jsp");
+			return;
+		}
 	}
 }

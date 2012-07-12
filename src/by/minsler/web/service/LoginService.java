@@ -5,7 +5,8 @@ public class LoginService {
 	public boolean authenticate(String userID, String password) {
 		// TODO implementation compare userID, password from database, for
 		// example
-		if (userID == null || userID.trim() == "") {
+		if (userID == null || userID.trim() == "" || password == null
+				|| password.trim() == "") {
 			return false;
 		}
 		return true;
